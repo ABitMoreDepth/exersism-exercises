@@ -9,10 +9,9 @@ import string
 def is_pangram(sample=None):
     if sample is None or not isinstance(sample, str):
         return False
-    letters = []
 
-    for character in sample.lower():
-        if character in string.ascii_lowercase and character not in letters:
-            letters.append(character)
+    sample = set(str(sample).lower())
+    alphabet = set(string.ascii_lowercase)
+    print(alphabet)
 
-    return ''.join(sorted(letters)) == string.ascii_lowercase
+    return alphabet <= sample
