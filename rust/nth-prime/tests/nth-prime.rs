@@ -19,3 +19,8 @@ fn test_sixth_prime() {
 fn test_big_prime() {
     assert_eq!(np::nth(10_000), 104_743);
 }
+
+#[test]
+fn test_huge_prime() {
+    println!("The millionth prime: {}", np::nth(1_000_000));
+}
